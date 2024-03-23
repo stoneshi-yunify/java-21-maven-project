@@ -4,8 +4,19 @@ This is a Java 21 template with Maven and JUnit. It can be used to experiment wi
 features, and experience which functional features Java offers. You can use this template, for
 example, to build a compiler.
 
+## Usage
+
 Building happens with `make`, running with `./hello`. The project build process is executed via the
 Maven wrapper which means that you do not need Maven on your machine.
+
+To execute the application, first build the application, then run it.
+
+```bash
+make
+./hello Petra
+```
+
+## Changes
 
 Remember to update the `pom.xml` with your actual main class. If the class `Hello` in the
 package `com.felixseifert.java` contains the main method of your whole application, the Maven file
@@ -32,6 +43,9 @@ mv hello hola
 ```
 
 ## Tests
+
+To run the tests, execute `make test`. This will internally trigger the execution of `make build`
+before actually triggering the tests.
 
 The tests are written with JUnit and can be found in the abstract class
 [`AbstractHelloTest`](src/test/java/com/felixseifert/java/AbstractHelloTest.java). The same tests
